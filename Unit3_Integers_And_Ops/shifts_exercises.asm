@@ -16,15 +16,34 @@ segment .bss
 
 
 segment .text
-        global  asm_main
+        global asm_main
 asm_main:
-        enter   0,0               ; setup routine
+        enter 0, 0 ; setup routine
         pusha
 
-		; TODO: add code
+        ; mov  eax, 10
+        ; shl  eax, 3
+        ; call print_int
+
+        ; mov  eax 010000045h
+        ; call print_int
+        ; call print_nl
+
+        ; shl  eax, 1
+        ; call print_int
+
+        ; mov  eax, 23
+        ; shr  eax, 2
+        ; call print_int
+        ; call print_nl
+
+        ; mov       eax, 4
+        ; mov       ebx, 2
+        ; test      eax, ebx
+        ; dump_regs 1
 
         popa
-        mov     eax, 0            ; return back to C
+        mov eax, 0 ; return back to C
         leave                     
         ret
 
